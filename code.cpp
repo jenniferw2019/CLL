@@ -144,3 +144,21 @@ void clist::copyValue(node* current, node* orear, node* copycurrent, int number)
 	}
     }
 }
+
+float clist::averageNum(node* current, int sum, int counter)
+{
+  if (current != rear)
+    {
+      sum = sum + current->data;
+      counter = counter + 1;
+      current = current->next;
+      return averageNum(current, sum, counter); 
+    }
+  else
+    {
+      sum = sum + current->data;
+      counter = counter + 1;
+      float answer = (float)sum / (float)counter;
+      return answer;
+    }
+}

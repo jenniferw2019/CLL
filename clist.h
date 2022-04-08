@@ -28,6 +28,7 @@ class clist
   int sum(node* current, int number);
   node* getRear();
   void copyValue(node* current, node* orear, node* copycurrent, int number);
+  float averageNum(node* current, int sum, int counter);
 
 	private:
 		node * rear;

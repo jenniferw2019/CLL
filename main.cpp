@@ -1,6 +1,8 @@
 #include "clist.h"
 #include <iostream>
+#include <iomanip>
 
+using namespace std;
 
 int main()
 {
@@ -28,11 +30,17 @@ int main()
     //cout << "total " << total << endl;
 
 
-    clist newList;
-    node* head;
-    newList.copyValue((oRear->next), oRear, head, 2);
-    newList.display();
+    //clist newList;
+    //node* head;
+    //newList.copyValue((oRear->next), oRear, head, 2);
+    //newList.display();
     //object.display(); //resulting list after your function call!
-    
+
+
+    float average = 0;
+    int sum = 0;
+    int counter = 0;
+    average = object.averageNum((oRear->next), sum, counter);
+    cout << setprecision(2) << fixed << average << endl;
     return 0;
 }
